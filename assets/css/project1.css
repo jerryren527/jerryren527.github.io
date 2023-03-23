@@ -58,8 +58,8 @@
 /*=============== BASE ===============*/
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  /* padding: 0; */
+  /* margin: 0; */
 }
 
 html {
@@ -82,9 +82,14 @@ h3 {
   font-weight: var(--font-medium);
 }
 
-ul {
+.nav__menu ul {
   list-style: none;
 }
+
+/* .container ul,
+.container ol {
+  list-style: inherit;
+} */
 
 a {
   text-decoration: none;
@@ -1359,7 +1364,7 @@ body.dark-theme {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
 
 .section-header-offset {
-  margin-top: 7.4rem;
+  margin-top: 0rem;
 }
 
 .article-image {
@@ -1500,7 +1505,7 @@ body.dark-theme {
 
 @media screen and (max-width: 1023px) {
   .section-header-offset {
-    margin-top: 1rem;
+    margin-top: -2rem;
     margin-bottom: 7rem;
   }
 }

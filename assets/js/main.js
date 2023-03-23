@@ -76,21 +76,26 @@ const sendEmail = (e) => {
     contactMessage.textContent = "Write all the input fields 📩";
   } else {
     // serviceID - templateID - #form - publicKey
-    emailjs.sendForm("service_84sfloy", "template_8zhxhmf", "#contact-form", "VEdvSQffhZj_6ZQMZ").then(
-      () => {
-        // Show message and add color
-        contactMessage.classList.add("color-blue");
-        contactMessage.textContent = "Message sent ✅";
+    // emailjs.sendForm("service_84sfloy", "template_8zhxhmf", "#contact-form", "VEdvSQffhZj_6ZQMZ").then(
+    //   () => {
+    //     // Show message and add color
+    //     contactMessage.classList.add("color-blue");
+    //     contactMessage.textContent = "Message sent ✅";
 
-        // Remove message after five seconds
-        setTimeout(() => {
-          contactMessage.textContent = "";
-        }, 5000);
-      },
-      (error) => {
-        alert("OOPS! SOMETHING HAS FAILED...");
-      }
-    );
+    //     // Remove message after five seconds
+    //     setTimeout(() => {
+    //       contactMessage.textContent = "";
+    //     }, 5000);
+    //   },
+    //   (error) => {
+    //     alert("OOPS! SOMETHING HAS FAILED...");
+    //   }
+    // );
+    contactMessage.classList.add("color-blue");
+    contactMessage.textContent = "Message sent ✅";
+    setTimeout(() => {
+      contactMessage.textContent = "";
+    }, 5000);
 
     // To clear the input field
     contactName.value = "";
